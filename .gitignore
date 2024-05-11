@@ -1,0 +1,13 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/TheLastBug/.vs
+/TheLastBug/bin/Debug/netcoreapp3.1
+/TheLastBug/obj
+/TheLastBug/wwwroot/Logs
+/TheLastBug.Business/bin/Debug/netcoreapp3.1
+/TheLastBug.Business/obj
+/TheLastBug.Domain/bin/Debug/netcoreapp3.1
+/TheLastBug.Domain/obj
+/.vs
