@@ -1,3 +1,5 @@
+CREATE DATABASE thelastbugdb;
+
 CREATE TABLE Usuarios (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,

@@ -41,10 +41,8 @@ namespace TheLastBug.Business.Services
         {
             try
             {
-                // Obtener el HttpContext actual
                 var httpContext = _httpContextAccessor.HttpContext;
 
-                // Obtener el UserId del claim de identidad
                 var userIdClaim = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
 
                 if (userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId))
@@ -53,7 +51,6 @@ namespace TheLastBug.Business.Services
                     context.Comunas.Add(comuna);
                     await context.SaveChangesAsync();
 
-                    // Registrar la acción de creación de comuna en el log
                     await logService.LogUserAction(userId, $"Creación de comuna: {comunaDto.Nombre}");
 
                     return comuna.Id;
